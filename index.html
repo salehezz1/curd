@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CURD</title>
+</head>
+<body>
+    <div class="grud">
+        <div class="head">
+            <h1>curd</h1>
+            <p> this is pragraph this is pragraph this is pragraph </p>
+        </div>
+        <div class="input">
+            <input type="text" id="title" placeholder="title">
+            <div class="prise">
+                <input onkeyup="getTotal()" type="number" id="prise" placeholder="prise">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">creat</button>
+        </div>
+        <div class="output">
+            <div class="searchBlock">
+                <input onkeyup = "searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnseach">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle"> search by title </button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory"> search by category </button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+<!--
+    test
+    
+    
+
+    <div id="discount">click my to show discount</div>
+    <div id="test">bool</div>
+    <div id="cars"></div>
+    <div id="myInfo"></div>
+    -->
+ <script src='javascript/javascript.js'></script>   
+
+
+</body>
+</html>
