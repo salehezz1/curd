@@ -138,6 +138,29 @@ function updateData(i){
     submit.innerHTML = "update";
     mood = "update";
     tmp = i;
+    submit.onclick = function(){
+        let newPro = {
+            title    : title.value.toLowerCase(),
+            prise    : prise.value,
+            taxes    : taxes.value,
+            ads      : ads.value,
+            discount : discount.value,
+            total    : total.innerHTML,
+            count    : count.value,
+            category : category.value.toLowerCase(),
+        }
+        if(title.value != '' && prise.value !='' && category.value != ''){
+            if(mood == "update"){
+                dataPro[tmp] = newPro;
+                dataPro.push(newPro);
+                
+                localStorage.setItem('product', JSON.stringify(dataPro));
+                showData();
+                clearData();
+        
+            }
+        }
+    }
     scroll({
         top: 0,
         behavior: "smooth",
