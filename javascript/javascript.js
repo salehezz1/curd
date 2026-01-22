@@ -112,7 +112,6 @@ function showData(){
                 btnDelete.innerHTML = '';
             }
         }
- showData();
 
 // delete
 function deleteData(i){
@@ -152,7 +151,6 @@ function updateData(i){
         if(title.value != '' && prise.value !='' && category.value != ''){
             if(mood == "update"){
                 dataPro[tmp] = newPro;
-                dataPro.push(newPro);
                 
                 localStorage.setItem('product', JSON.stringify(dataPro));
                 showData();
