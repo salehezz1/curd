@@ -40,12 +40,13 @@ submit.onclick = function(){
         count    : count.value,
         category : category.value.toLowerCase(),
     }
-    if(title.value != '' && prise.value !='' && category.value != ''){
+    if(title.value != '' || prise.value !='' || category.value != ''){
     if(mood == "creat"){
     if(newPro.count > 1){
         for(let i=0 ; i < newPro.count ; i++){
             dataPro.push(newPro);
-            showData()
+            showData();
+            clearData();
 
         }
     }else{
@@ -148,7 +149,7 @@ function updateData(i){
             count    : count.value,
             category : category.value.toLowerCase(),
         }
-        if(title.value != '' && prise.value !='' && category.value != ''){
+        if(title.value != '' || prise.value !='' || category.value != ''){
             if(mood == "update"){
                 dataPro[tmp] = newPro;
                 
